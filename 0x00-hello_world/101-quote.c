@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <string.h>
 
 /**
  * main -display "and that piece of art is useful" - Dora Korper, 2015-10-19"
@@ -8,8 +7,7 @@
  */
 int main(void)
 {
-const char *msg = "and that piece of art is useful\" - Dora Korper, 2015-10-19";
-write(STDOUT_FILENO, msg, strlen(msg));
+write("and that piece of art is useful\" - Dora Korper, 2015-10-19\n");
 
 return (1);
 }
