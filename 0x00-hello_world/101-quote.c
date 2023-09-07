@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-const char *message = "and that piece of art is useful\" - Dora Korper, 2015-10-19\n";
-write(STDOUT_FILENO, message, strlen(message));
+const char *msg = "and that piece of art is useful\" - Dora Korper, 2015-10-19";
+write(STDOUT_FILENO, msg, strlen(msg));
 
 return (1);
 }
