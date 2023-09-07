@@ -2,7 +2,7 @@
 
 /**
  * main -display "Programming is like building a multilingual puzzle"
- * Return: 0 and exit the program 
+ * Return: 0 and exit the program
  */
 int main(void)
 {
