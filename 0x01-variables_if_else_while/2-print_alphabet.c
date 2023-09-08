@@ -11,7 +11,7 @@ int main(void)
 
 	while (c < 123)
 		putchar((char)c), c++;
-	putchar("\n");
+	putchar('\n');
 
 	return (0);
 }
