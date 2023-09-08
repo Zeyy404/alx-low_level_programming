@@ -9,7 +9,7 @@ int main(void)
 	char c;
 
 	c = 97;
-	while ((c != 102 && c != 114) && c < 123)
+	while ((c != 101 || c != 113) && c < 123)
 		putchar((char)c), c++;
 	putchar('\n');
 	return (0);
