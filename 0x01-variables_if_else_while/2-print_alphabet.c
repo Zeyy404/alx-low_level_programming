@@ -7,7 +7,7 @@
 int main(void)
 {
 	char c;
-  
+
 	c = 97;
 	while (c < 123)
 		putchar((char)c), c++;
