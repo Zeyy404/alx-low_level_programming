@@ -11,7 +11,7 @@ int main(void)
 	c = 97;
 	while (c < 123)
 		putchar((char)c), c++;
-	c = c /2 + 4;
+	c = c / 2 + 4;
 	while (c < 91)
 		putchar((char)c), c++;
 	putchar('\n');
