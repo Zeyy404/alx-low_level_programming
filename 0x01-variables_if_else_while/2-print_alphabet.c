@@ -11,7 +11,8 @@ int main(void)
 
 	while (num < 123)
 		putchar((char)num);
+		num++;
 	putchar("\n");
-	
+
 	return (0);
 }
