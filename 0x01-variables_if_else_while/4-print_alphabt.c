@@ -13,6 +13,7 @@ int main(void)
 	  {
 		if (c != 102 && c != 114)
 			putchar((char)c), c++;
+	  }
 	putchar('\n');
 	return (0);
 }
