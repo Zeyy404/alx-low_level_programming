@@ -8,7 +8,7 @@ int main(void)
 {
 	char c;
 
-	c = 123
+	c = 123;
 	while (c > 64)
 		{
 			if (c > 96)
