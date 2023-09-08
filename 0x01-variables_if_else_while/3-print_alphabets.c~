@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+/**
+ * main - prints the alphabet in lowercase, and then in uppercase
+ * Return: 0 and exit the program 
+ */
+int main(void)
+{
+  char c;
+
+  c = 65;
+  while (c < 90)
+    
+}
