@@ -6,12 +6,12 @@
  */
 int main(void)
 {
-  char c;
+	char c;
 
-  c = 122;
-  while (c < 96)
-    putchar((char)c), c++;
-  putchar('\n');
+	c = 122;
+	while (c > 96)
+		putchar((char)c), c--;
+	putchar('\n');
 
-  return (0);
+	return (0);
 }
