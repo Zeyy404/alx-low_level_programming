@@ -11,7 +11,8 @@ int main(void)
 	c = 97;
 	while (c < 123)
 	{
-		if (c != 101 || c != 113){
+		if (c != 101 && c != 113)
+		{
 			putchar((char)c);
 		}
 		c++;
