@@ -12,7 +12,8 @@ int main(void)
 	while (n < 58)
 		{
 			putchar((char)n);
-			putchar(44' ');
+			putchar(44);
+			putchar(32);
 			n++;
 		}
 	putchar('\n');
