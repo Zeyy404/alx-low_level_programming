@@ -14,11 +14,13 @@ int main(void)
 	i = 48;
 	while (i < 58)
 	{
-		j = i;
-		k = i;
-		l = j + 1;
+	  j = 48;
+	  while (j < 58)
+	  {
+		k = 48;
 		while (k < 58)
 		{
+			l = 48;
 			while (l < 58)
 			{
 				putchar((char)i);
@@ -35,8 +37,9 @@ int main(void)
 		    	}
 			k++;
 		}
-		i++;
 		j++;
+	  }
+	  i++;
 	}
 	putchar('\n');
 	return (0);
