@@ -20,10 +20,10 @@ int main(void)
 					putchar((char)i);
 					putchar((char)j);
 					if (i != 56)
-					  {
+					{
 						putchar(44);
 						putchar(32);
-					  }
+					}
 				}
 				j++;
 			}
