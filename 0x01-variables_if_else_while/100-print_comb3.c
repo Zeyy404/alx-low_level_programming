@@ -11,14 +11,17 @@ int main(void)
 
 	i = 48;
 	j = 49;
-	while (i < 57 && j < 58)
+       	while (i < 57)
 	  {
-		putchar((char)i);
-		putchar((char)j);
-		putchar(44);
-		putchar(32);
-		i++;
-		j++;
+	    putchar((char)i);
+	    while (j < 58)
+		  {
+		    putchar((char)j);
+		    putchar(44);
+		    putchar(32);
+		    j++;
+		  }
+	    i++;
 	  }
 	putchar('\n');
   	return (0);
