@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/**
+ * main - prints all combinations of two two-digit numbers, no repetition
+ * Return: 0 and exit the program
+ */
 int main(void)
 {
 	int i;
@@ -8,7 +12,7 @@ int main(void)
 	i = 0;
 	while (i <= 99)
 	{
-		j = i;
+		j = i + 1;
 		while (j <= 99)
 		{
 			putchar((i / 10) + 48);
@@ -26,5 +30,5 @@ int main(void)
 		i++;
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
