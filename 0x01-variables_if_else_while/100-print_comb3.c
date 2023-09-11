@@ -20,10 +20,10 @@ int main(void)
 					putchar((char)i);
 					putchar((char)j);
 				}
+				putchar(44);
+				putchar(32);
 				j++;
 			}
-			putchar(44);
-			putchar(32);
 			i++;
 		}
 	putchar('\n');
