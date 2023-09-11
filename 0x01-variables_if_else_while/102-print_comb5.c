@@ -17,20 +17,23 @@ int main(void)
 		j = i;
 		k = i;
 		l = j + 1;
-		while (l < 58)
+		while (k < 58)
 		{
-			putchar((char)i);
-			putchar((char)j);
-			putchar(32);
-			putchar((char)k);
-			putchar((char)l);
-			k++;
-			l++;
-			if (i != 57 && j != 57)
+			while (l < 58)
 			{
-				putchar(44);
+				putchar((char)i);
+				putchar((char)j);
 				putchar(32);
-			}
+				putchar((char)k);
+				putchar((char)l);
+				l++;
+				if (i != 57 && j != 57)
+				{
+					putchar(44);
+					putchar(32);
+				}
+		    	}
+			k++;
 		}
 		i++;
 		j++;
