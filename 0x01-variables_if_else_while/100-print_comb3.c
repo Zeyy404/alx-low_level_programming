@@ -14,13 +14,13 @@ int main(void)
        	while (i < 57)
 	  {
 	    putchar((char)i);
-	    while (j < 58)
-		  {
-		    putchar((char)j);
-		    putchar(44);
-		    putchar(32);
-		    j++;
-		  }
+	    if (j < 58)
+	      {
+		putchar((char)j);
+		putchar(44);
+		putchar(32);
+		j++;
+	      }
 	    i++;
 	  }
 	putchar('\n');
