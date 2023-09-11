@@ -12,13 +12,16 @@ int main(void)
 	i = 48;
 	while (i < 57)
 	  {
-		j = 49;
+		j = i;
 		while (j < 58)
 		  {
-			putchar((char)i);
-			putchar((char)j);
-			putchar(44);
-			putchar(32);
+			if (i != j)
+			  {
+				putchar((char)i);
+				putchar((char)j);
+				putchar(44);
+				putchar(32);
+			  }
 			j++;
 		  }
 		i++;
