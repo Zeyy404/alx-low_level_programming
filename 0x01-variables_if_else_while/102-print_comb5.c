@@ -14,32 +14,32 @@ int main(void)
 	i = 48;
 	while (i < 58)
 	{
-	  j = 48;
-	  while (j < 58)
-	  {
-		k = 48;
-		while (k < 58)
+		j = 48;
+		while (j < 58)
 		{
-			l = 48;
-			while (l < 58)
+			k = i;
+			while (k < 58)
 			{
-				putchar((char)i);
-				putchar((char)j);
-				putchar(32);
-				putchar((char)k);
-				putchar((char)l);
-				l++;
-				if (i != 57 && j != 57)
+				l = j + 1;
+				while (l < 58)
 				{
-					putchar(44);
+					putchar((char)i);
+					putchar((char)j);
 					putchar(32);
+					putchar((char)k);
+					putchar((char)l);
+					l++;
+					if (l > j)
+					{
+						putchar(44);
+						putchar(32);
+					}
 				}
-		    	}
-			k++;
+				k++;
+			}
+			j++;
 		}
-		j++;
-	  }
-	  i++;
+		i++;
 	}
 	putchar('\n');
 	return (0);
