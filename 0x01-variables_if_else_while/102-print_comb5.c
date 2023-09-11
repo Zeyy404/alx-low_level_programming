@@ -8,26 +8,32 @@ int main(void)
 {
 	int i;
 	int j;
+	int k;
+	int l;
 
 	i = 48;
 	while (i < 58)
 	{
 		j = i;
-		while (j < 58)
+		k = i;
+		l = j + 1;
+		while (l < 58)
 		{
 			putchar((char)i);
 			putchar((char)j);
 			putchar(32);
-			j++;
-			putchar((char)i);
-			putchar((char)j);
+			putchar((char)k);
+			putchar((char)l);
+			k++;
+			l++;
+			if (i != 57 && j != 57)
+			{
+				putchar(44);
+				putchar(32);
+			}
 		}
 		i++;
-		if (i != 57 && j != 57)
-		{
-			putchar(44);
-			putchar(32);
-		}
+		j++;
 	}
 	putchar('\n');
 	return (0);
