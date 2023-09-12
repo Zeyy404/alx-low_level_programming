@@ -10,7 +10,7 @@ void print_alphabet_x10(void)
 	int i;
 
 	i = 0;
-	while ( i < 10)
+	while (i < 10)
 	{
 		c = 97;
 		while (c < 123)
@@ -18,7 +18,7 @@ void print_alphabet_x10(void)
 			_putchar(c);
 			c++;
 		}
-		_putchar('\n');		
+		_putchar('\n');
 		i++;
 	}
 }
