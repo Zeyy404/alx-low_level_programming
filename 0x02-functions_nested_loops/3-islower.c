@@ -6,7 +6,7 @@
  */
 int _islower(int c)
 {
-	char c;
+	int c;
 
 	if (c > 96 && c < 123)
 		_putchar(48);
