@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-	char c[];
+	char c[7];
 	int i;
 
-	c[] = "_putchar";
+	c[7] = "_putchar";
 	i = 0;
 	while (c[i] < '\0')
 	{
