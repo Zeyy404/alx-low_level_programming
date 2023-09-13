@@ -6,20 +6,20 @@
  */
 int main(void)
 {
-	long int i, f1, f2, sum;
+	unsigned long int i, f1, f2, sum;
 
 	f1 = 1;
 	f2 = 2;
-	printf("%ld, %ld, ", f1, f2);
+	printf("%lu, %lu, ", f1, f2);
 	for (i = 2 ; i < 98 ; i++)
 	{
 		sum = f1 + f2;
 		f1 = f2;
 		f2 = sum;
 		if (i != 97)
-			printf("%ld, ", sum);
+			printf("%lu, ", sum);
 		else
-			printf("%ld\n", sum);
+			printf("%lu\n", sum);
 	}
 	return (0);
 }
