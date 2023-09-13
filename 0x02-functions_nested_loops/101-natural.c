@@ -6,14 +6,15 @@
  */
 int main(void)
 {
-	int i, _x3, _x5, sum;
+	int i, _x3, _x5;
+	long int sum;
 
 	sum = 0;
 	for (i = 0 ; i < 1024 ; i++)
 	{
 		_x3 = i * 3;
 		_x5 = i * 5;
-		sum = sum + (_x3 + _x5):
+		sum = sum + (_x3 + _x5);
 	}
 	printf("%ld\n", sum);
 	return (0);
