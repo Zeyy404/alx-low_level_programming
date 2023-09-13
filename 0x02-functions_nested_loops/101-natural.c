@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-	int i, _x3, _x5;
-	long int sum;
+	int i, sum;
 
 	sum = 0;
 	for (i = 0 ; i < 1024 ; i++)
 	{
-		_x3 = i * 3;
-		_x5 = i * 5;
-		sum = sum + (_x3 + _x5);
+		if (i % 3 == 0 || i % 5 == 0)
+		{
+			sum = sum + i;
+		}
 	}
-	printf("%ld\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
