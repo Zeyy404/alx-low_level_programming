@@ -7,8 +7,7 @@
  */
 void print_times_table(int n)
 {
-	int i;
-	int j;
+	int i, j;
 
 	if (n < 15 && n > -1)
 	{
@@ -39,7 +38,7 @@ void print_times_table(int n)
 					_putchar(((i * j) + 48) / 100);
 				}
 
-				if (i != n + 1)
+				if (i != n || j != 0)
 				{
 					_putchar(44);
 					_putchar(32);
