@@ -17,9 +17,9 @@ int main(void)
 		f1 = f2;
 		f2 = sum;
 		if (i != 97)
-			printf("%d, ", sum);
+			printf("%ld, ", sum);
 		else
-			printf("%d\n", sum);
+			printf("%ld\n", sum);
 	}
 	return (0);
 }
