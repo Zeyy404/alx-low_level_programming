@@ -34,12 +34,12 @@ void print_times_table(int n)
 				}
 				else if (i * j > 99)
 				{
-					_putchar(((i * j) + 48) / 100);
-					_putchar((((i * j) + 48) / 10) % 10);
+					_putchar(((i * j) + 48) / 10);
 					_putchar(((i * j) + 48) % 10);
+					_putchar(((i * j) + 48) / 100);
 				}
 
-				if (i != n)
+				if (i != n + 1)
 				{
 					_putchar(44);
 					_putchar(32);
