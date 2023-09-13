@@ -2,7 +2,8 @@
 
 /**
  * add - adds two integers and returns the result
- * @i & @j: the integrs
+ * @i: the first integr
+ * @j: the second integer
  * Return: the additional result
  */
 int add(int i, int j)
