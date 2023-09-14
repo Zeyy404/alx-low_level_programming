@@ -15,10 +15,10 @@ void more_numbers(void)
 		if (n == 57)
 		{
 			i = 49;
-			while (i < 52)
+			while (i < 53)
 			{
-				_putchar((n + i) / 10);
-				_putchar((n + i) % 10);
+				_putchar(i);
+				_putchar(i + 1);
 				i++;
 			}
 		}
