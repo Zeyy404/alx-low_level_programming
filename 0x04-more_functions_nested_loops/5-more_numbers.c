@@ -28,5 +28,6 @@ void more_numbers(void)
 			i++;
 		}
 		n++;
+		_putchar('\n');
 	}
 }
