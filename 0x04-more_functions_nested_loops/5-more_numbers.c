@@ -6,7 +6,7 @@
  */
 void more_numbers(void)
 {
-	int n, i;
+	int n, i, j;
 
 	n = 0;
 	while (n < 10)
