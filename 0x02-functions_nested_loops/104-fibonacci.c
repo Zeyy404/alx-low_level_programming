@@ -44,7 +44,7 @@ int main(void)
 			_f2 = (f_1 % 1000000000);
 		}
 
-		if((f1 + f2 < 0) && case_1 == 1)
+		if(((f1 + f2) < 0) && case_1 == 1)
 			case_1 = 0;
 	}
 	printf("\n");
