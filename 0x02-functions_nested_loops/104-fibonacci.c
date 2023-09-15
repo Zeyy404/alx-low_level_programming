@@ -23,7 +23,7 @@ int main(void)
 			f2 = sum;
 			printf(", %lu", sum);
 
-			if (sum < 0)
+			if (((f1 + f2) < 0) && case_1 == 1)
 				case_1 = 0;
 		}
 		else
