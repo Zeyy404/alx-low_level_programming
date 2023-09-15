@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i, case_1, case_2;
-	unsigned long int f1, f2, sum, _f1, _f2, f_1, f_2;
+	long int f1, f2, sum, _f1, _f2, f_1, f_2;
 
 	f1 = 1;
 	f2 = 2;
