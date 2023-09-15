@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	int i, case_1;
+	int i, case_1, case_2;
 	unsigned long int f1, f2, sum, _f1, _f2, f_1, f_2;
 
 	f1 = 1;
 	f2 = 2;
 	case_1 = 1;
-	sum = 0;
+	case_2 = 1;
 	printf("%lu, %lu", f1, f2);
 	for (i = 2 ; i < 98 ; i++)
 	{
@@ -25,10 +25,14 @@ int main(void)
 		}
 		else
 		{
-			_f1 = (f1 % 1000000000);
-			_f2 = (f2 % 1000000000);
-			f1 = (f1 / 1000000000);
-			f2 = (f2 / 1000000000);
+			if (case_2)
+			{
+				_f1 = (f1 % 1000000000);
+				_f2 = (f2 % 1000000000);
+				f1 = (f1 / 1000000000);
+				f2 = (f2 / 1000000000);
+				case_2 = 0;
+			}
 
 			f_1 = _f1 + _f2;
 			f_2 = f1 + f2 + (f_1 % 1000000000);
