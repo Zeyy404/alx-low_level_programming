@@ -12,6 +12,7 @@ int main(void)
 	f1 = 1;
 	f2 = 2;
 	case_1 = 1;
+	sum = 0;
 	printf("%lu, %lu, ", f1, f2);
 	for (i = 2 ; i < 98 ; i++)
 	{
