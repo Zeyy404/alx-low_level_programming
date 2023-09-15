@@ -22,6 +22,9 @@ int main(void)
 			f1 = f2;
 			f2 = sum;
 			printf(", %lu", sum);
+
+			if (sum < 0)
+				case_1 = 0;
 		}
 		else
 		{
