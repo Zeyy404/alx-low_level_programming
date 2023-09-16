@@ -21,6 +21,8 @@ int main(void)
 			f1 = f2;
 			f2 = sum;
 			printf(", %ld", sum);
+			if ((f1 + f2 < 0) && case_1 == 1)
+				case_1 = 0;
 		}
 		else
 		{
@@ -41,8 +43,6 @@ int main(void)
 			f2 = f_2;
 			_f2 = (f_1 % 1000000000);
 		}
-		if ((f1 + f2 < 0) && case_1 == 1)
-			case_1 = 0;
 	}
 	printf("\n");
 	return (0);
