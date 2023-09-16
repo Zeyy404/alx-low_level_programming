@@ -13,7 +13,7 @@ int main(void)
 	f2 = 2;
 	case_1 = 1;
 	case_2 = 1;
-	printf("%lu, %lu", f1, f2);
+	printf("%ld, %ld", f1, f2);
 	for (i = 2 ; i < 98 ; i++)
 	{
 		if (case_1)
@@ -21,7 +21,7 @@ int main(void)
 			sum = f1 + f2;
 			f1 = f2;
 			f2 = sum;
-			printf(", %lu", sum);
+			printf(", %ld", sum);
 		}
 		else
 		{
@@ -34,8 +34,8 @@ int main(void)
 			}
 			f_1 = _f1 + _f2;
 			f_2 = f1 + f2 + (f_1 % 1000000000);
-			printf(", %lu", f_2);
-			printf("%lu", (f_1 % 1000000000));
+			printf(", %ld", f_2);
+			printf("%ld", (f_1 % 1000000000));
 			f1 = f2;
 			_f1 = _f2;
 			f2 = f_2;
