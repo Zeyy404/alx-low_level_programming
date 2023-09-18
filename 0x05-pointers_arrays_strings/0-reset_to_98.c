@@ -14,7 +14,7 @@ void reset_to_98(int *n)
 	{
 		_putchar(prt[i]);
 	}
-	_putchar(n + 48);
+	_putchar(integer + 48);
 	_putchar('\n');
 	*n = &integer;
 	*n = 98;
@@ -22,6 +22,6 @@ void reset_to_98(int *n)
 	{
 		_putchar(prt[i]);
 	}
-	_putchar(n + 48);
+	_putchar(integer + 48);
 	_putchar('\n');
 }
