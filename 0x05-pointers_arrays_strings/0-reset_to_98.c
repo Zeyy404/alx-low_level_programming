@@ -13,7 +13,7 @@ void reset_to_98(int *n)
 	for (i = 0 ; i != '\0' ; i++)
 		_putchar(prt[i]);
 
-	while (interger != 0)
+	while (integer != 0)
 	{
 		_putchar((integer & 10) + 48);
 		integer = integer / 10;
