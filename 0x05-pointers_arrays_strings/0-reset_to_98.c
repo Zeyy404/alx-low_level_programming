@@ -7,7 +7,7 @@
  */
 void reset_to_98(int *n)
 {
-	int integer;
+	int integer, i;
 	char prt[] = "n=";
 
 	for (i = 0 ; i != '\0' ; i++)
