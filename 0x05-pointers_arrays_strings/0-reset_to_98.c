@@ -9,12 +9,6 @@ void reset_to_98(int *n)
 {
 	int integer;
 
-	while (integer != 0)
-	{
-		_putchar((integer & 10) + 48);
-		integer = integer / 10;
-	}
-	_putchar('\n');
 	n = &integer;
 	*n = 98;
 	_putchar((integer / 10) + 48);
