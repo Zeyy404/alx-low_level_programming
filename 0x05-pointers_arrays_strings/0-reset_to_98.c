@@ -7,10 +7,10 @@
  */
 void reset_to_98(int *n)
 {
-	int num;
+	int p;
 
-	n = &num;
-	*n = 98;
-	_putchar((num / 10) + 48);
-	_putchar((num % 10) + 48);
+	p = &n;
+	*p = 98;
+	_putchar((n / 10) + 48);
+	_putchar((n % 10) + 48);
 }
