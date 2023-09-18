@@ -14,9 +14,5 @@ int _strlen(char *s)
 		i++;
 	} while (*s != '\0');
 
-	while (i != 0)
-	{
-		_putchar((i % 10) + 48);
-		i = i / 10;
-	}
+	return (i);
 }
