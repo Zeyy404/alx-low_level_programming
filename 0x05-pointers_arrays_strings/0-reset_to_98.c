@@ -7,11 +7,7 @@
  */
 void reset_to_98(int *n)
 {
-	int integer, i;
-	char prt[] = "n=";
-
-	for (i = 0 ; i != '\0' ; i++)
-		_putchar(prt[i]);
+	int integer;
 
 	while (integer != 0)
 	{
@@ -19,8 +15,6 @@ void reset_to_98(int *n)
 		integer = integer / 10;
 	}
 	_putchar('\n');
-	for (i = 0 ; i != '\0' ; i++)
-		_putchar(prt[i]);
 	n = &integer;
 	*n = 98;
 	_putchar((integer / 10) + 48);
