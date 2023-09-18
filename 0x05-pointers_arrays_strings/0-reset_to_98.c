@@ -8,14 +8,13 @@
 void reset_to_98(int *n)
 {
 	int integer, i;
-	char prt[];
+	char prt[] = "n=";
 
-	prt[3] = "n=";
 	for (i = 0 ; i !='\0' ; i++)
 	{
 		_putchar(prt[i]);
 	}
-	_putchar("%d", integer);
+	_putchar(n + 48);
 	_putchar('\n');
 	*n = &integer;
 	*n = 98;
@@ -23,6 +22,6 @@ void reset_to_98(int *n)
 	{
 		_putchar(prt[i]);
 	}
-	_putchar("%d", integer);
+	_putchar(n + 48);
 	_putchar('\n');
 }
