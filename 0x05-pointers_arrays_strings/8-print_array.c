@@ -1,9 +1,10 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
  * print_array - prints n elements of an array of integers
  * @a: typa int pointer
- * @n: the variable to print elements
+ * @n: the number of the elements to be printed
  * Return: void
  */
 void print_array(int *a, int n)
@@ -11,7 +12,12 @@ void print_array(int *a, int n)
 	int i;
 
 	for (i = 0 ; i < n ; i++)
-		_putchar(a[n]);
+	{
+		if (i != (n - 1))
+			printf("%d, ", a[n]);
+		else
+			printf("%d", a[n]);
+	}
 
 	_putchar('\n');
 }
