@@ -11,9 +11,9 @@ int _atoi(char *s)
 
 	for (i = 0 ; s[i] != '\0' ; i++)
 	{
-		if (s[i] >= 48 && s[i] <= 57)
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (s[i -1] == 43 || s[i -1] == 45)
+			if (s[i -1] == '-' || s[i -1] == '+')
 				return (s[i - 1]);
 			return (s[i]);
 		}
