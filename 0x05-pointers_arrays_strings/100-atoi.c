@@ -26,10 +26,13 @@ int _atoi(char *s)
 			if (result > 0)
 			{
 				result = result * 10 - (s[i] - '0');
+				i++;
 			}
 			else
+			{
 				result = result * 10 + (s[i] - '0');
-			i++;
+				i++;
+			}
 		}
 	}
 
