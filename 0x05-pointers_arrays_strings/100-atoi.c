@@ -22,6 +22,8 @@ int _atoi(char *s)
 		{
 			result = result * 10 - (s[i] - '0');
 		}
+		else if (result != 0 && s[i] == ' ')
+			break;
 		i++;
 	}
 	sign = sign * -1;
