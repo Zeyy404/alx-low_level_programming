@@ -13,12 +13,9 @@ int _atoi(char *s)
 	sign = 1;
 	while (s[i] != '\0')
 	{
-		if (s[i] < '0' || s[i] > '9')
+		if (s[i] == '-')
 		{
-			if (s[i] == '-')
-			{
-				sign = sign * -1;
-			}
+			sign = sign * -1;
 		}
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -26,6 +23,6 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	sign = sign * -1;
+
 	return (result * sign);
 }
