@@ -12,7 +12,7 @@ int _atoi(char *s)
 	result = i = 0;
 	sign = 1;
 
-	while (s[i] != '\0')
+	while (s[i] != '\0' || s[i] != ' ' || s[i] != '\t')
 	{
 		if (s[i] == '-')
 		{
