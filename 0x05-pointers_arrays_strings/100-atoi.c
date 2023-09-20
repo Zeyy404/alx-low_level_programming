@@ -3,7 +3,7 @@
 /**
  * _atoi - coverts a string to an integer
  * @s: type char pointer
- * Return: the integer
+ * Return: the integer if the string contain ones, 0 otherwise
  */
 int _atoi(char *s)
 {
@@ -21,10 +21,8 @@ int _atoi(char *s)
 		if (s[i] == '-')
 		{
 			sign = sign * -1;
-			i++;
 		}
-		else
-			i++;
+		i++;
 	}
 
 	return (result * sign);
