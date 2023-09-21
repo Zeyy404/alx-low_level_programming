@@ -11,16 +11,27 @@ void reverse_array(int *a, int n)
 	int i, j, temp;
 
 	i = j = 0;
-	while (a[i] != '\0')
+	while (i < n)
 		i++;
-
 	i--;
-	while (i >= 0)
+	if (n % 2 == 0)
 	{
-		temp = a[i];
-		a[i] = a[j];
-		a[j] = temp;
-		j++;
-		i--;
+		while (i != j)
+		{
+			temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+			j++;
+			i--;
+		}
 	}
+	else
+		while (i > j)
+		{
+			temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+			j++;
+			i--;
+		}
 }
