@@ -31,7 +31,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[k] = (sum % 10) + '0';
 	}
 	r[k] = '\0';
-	if (i >= 0 || j >= 0 || sum)
+	if (k == size_r && (n1[i] != '\0' || n2[j] != '\0' || sum)
 	{
 		return (0);
 	}
