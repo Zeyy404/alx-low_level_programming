@@ -18,7 +18,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	for (j = 0 ; n2[j] != '\0' ; j++)
 		;
 
-	for (i -= 1, j -= 1, k = 0 ; k < size_r - 1 ; i--, j--, k++)
+	for (i -= 1, j -= 1, k = 0 ; k < size_r ; i--, j--, k++)
 	{
 		sum = rem;
 		if (i >= 0)
@@ -31,7 +31,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[k] = (sum % 10) + '0';
 	}
 	r[k] = '\0';
-	if (k == size_r && (n1[i] != '\0' || n2[j] != '\0'))
+	if (k == size_r && (i >= 0 || j >= 0))
 	{
 		return (0);
 	}
