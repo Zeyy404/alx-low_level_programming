@@ -10,7 +10,7 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, rem;
+	int i, j, k, l, rem, sum, temp;
 
 	rem = 0;
 	for (i = 0 ; n1[i] != '\0' ; i++)
@@ -18,18 +18,28 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	for (j = 0 ; n2[j] != '\0' ; j++)
 		;
 
-	if (size_r > (i + 1) && size_r > (j + 1))
+	for (i -= 1, j -= 1, k = 0 ; k < size_r ; i--, j--, k++)
 	{
-		for (; size_r != 0 ; size_r--)
-		{
-			r[size_r] = ((rem + (n1[i] + n2[j]) % 10) + '0');
-			rem = (((n1[i] + n2[j]) / 10) + '0');
-			j--;
-			i--;
-		}
+		sum = rem;
+		if (i >= 0)
+			sum += n1[i] - '0';
+		if (j >= 0)
+			sum += n2[j] - '0';
+		if (i < 0 && j < 0 && sum == 0)
+			break;
+		rem = sum / 10;
+		r[k] = (sum % 10) + '0';
 	}
-	else
-		r = 0;
-
+	r[k] = '\0';
+	if (k == size_r && (n1[i] != '\0' || n2[j] != '\0'))
+	{
+		return (0);
+	}
+	for (k -= 1, l = 0; l < k ; k--, l++)
+	{
+		temp = r[k];
+		r[k] = r[l];
+		r[l] = temp;
+	}
 	return (r);
 }
