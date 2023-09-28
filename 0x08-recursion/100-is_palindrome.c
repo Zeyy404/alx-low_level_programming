@@ -1,7 +1,5 @@
 #include "main.h"
 
-#include "main.h"
-
 /**
  * _strlen_recursion - prints the length of a string
  * @s: type char pointer
@@ -15,6 +13,12 @@ int _strlen_recursion(char *s)
 		return (1 + _strlen_recursion(s + 1));
 }
 
+/**
+ * is_palind - checks if a string is palindrome or not
+ * @a: type char pointer
+ * @b: length of string
+ * Return: 1 or 0
+ */
 int is_palind(char *a, int b)
 {
 	if (b <= 1)
@@ -26,7 +30,7 @@ int is_palind(char *a, int b)
 }
 
 /**
- * is_palindrome - check if the string is a palindrome or not
+ * is_palindrome - checks if the string is a palindrome or not
  * @s: type char pointer
  * Return: 1 if string is palindrome or 0 if not
  */
