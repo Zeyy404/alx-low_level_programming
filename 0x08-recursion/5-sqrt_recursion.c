@@ -2,8 +2,8 @@
 
 /**
  * _sqrt_rec - finds the natural sqr root
- * @n: input number
- * @x: int
+ * @x: input number
+ * @y: input number
  * Return: sqr root value
  */
 int _sqrt_rec(int x, int y)
