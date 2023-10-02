@@ -9,36 +9,28 @@
  */
 int main(int argc, char *argv[])
 {
-	int q, d, n, c, p, cents, sum = 0;
+	int i, cents, ncoins, sum = 0;
+	int coins[5] = {25, 10, 5, 2, 1};
 
-	cents = atoi(argv[1]);
-	if (argc - 1 == 1)
-	{
-		if (cents < 0)
-		{
-			printf("0\n");
-			return (0);
-		}
-		else
-		{
-			q = cents / 25;
-			cents -= q * 25;
-			d = cents / 10;
-			cents -= d * 10;
-			n = cents / 5;
-			cents -= n * 5;
-			c = cents / 2;
-			cents -= c * 2;
-			p = cents / 1;
-			cents -= p * 1;
-		}
-		sum = q + d + n + c + p;
-		printf("%d\n", sum);
-		return (0);
-	}
-	else
+	if ((argc - 1) != 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	cents = atoi(argv[1]);
+	if (cents < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	for (i = 0 ; i < 5 ; i++)
+	{
+		ncoins = cents / coins[i];
+		sum += ncoins;
+		cents -= ncoins * coins[i];
+	}
+	printf("%d\n", sum);
+	return (0);
 }
