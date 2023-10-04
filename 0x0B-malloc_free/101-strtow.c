@@ -16,6 +16,9 @@ char **strtow(char *str)
 	int i, wflag, wlen;
 
 	i = wflag = wlen = 0;
+	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
+		return (NULL);
+
 	while (str[i])
 	{
 		if (wflag == 0 && str[i] != ' ')
@@ -30,8 +33,7 @@ char **strtow(char *str)
 	if (wflag == 1)
 		wlen++;
 	wlen++;
-
-	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
+	if (wlen == 0)
 		return (NULL);
 
 	arr = (char **)malloc(wlen * sizeof(char *));
