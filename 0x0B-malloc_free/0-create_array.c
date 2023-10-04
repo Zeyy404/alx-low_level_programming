@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 	{
-		a = (char*)malloc(size * sizeof(char));
+		a = (char *)malloc(size * sizeof(char));
 		for (i = 0 ; i < size ; i++)
 			a[i] = c;
 
@@ -28,4 +28,5 @@ char *create_array(unsigned int size, char c)
 		else
 			return (a);
 	}
+	free(a);
 }
