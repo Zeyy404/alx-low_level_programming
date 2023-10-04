@@ -30,11 +30,14 @@ char **strtow(char *str)
 		}
 		i++;
 	}
+
 	if (wflag == 1)
-		wlen++;
-	wlen++;
+		wlen += 1;
+	else
+		wlen += 0;
 	if (wlen == 0)
 		return (NULL);
+	wlen++;
 
 	arr = (char **)malloc(wlen * sizeof(char *));
 	if (arr == NULL)
