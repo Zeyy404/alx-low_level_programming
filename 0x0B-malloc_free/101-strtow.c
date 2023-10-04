@@ -20,7 +20,7 @@ char **strtow(char *str)
 	{
 		if (wflag == 0 && str[i] != ' ')
 			wflag = 1;
-		if (i > 0 && str[i] == ' ' && str[i -1] != ' ')
+		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
 		{
 			wflag = 0;
 			wlen++;
@@ -29,6 +29,7 @@ char **strtow(char *str)
 	}
 	if (wflag == 1)
 		wlen++;
+	wlen++;
 
 	if (str == NULL || wlen == 0)
 		return (NULL);
@@ -60,7 +61,7 @@ void wstring(char **arr, char *str)
 			ws = i;
 			wflag = 1;
 		}
-		if (i > 0 && str [i] == ' ' && str[i - 1] != ' ')
+		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
 		{
 			_wstring(arr, str, ws, i, j);
 			j++;
