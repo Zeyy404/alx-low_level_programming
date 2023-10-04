@@ -31,7 +31,7 @@ char **strtow(char *str)
 		wlen++;
 	wlen++;
 
-	if (str == NULL || wlen == 0 || str[0] == ' ' && str[1] == '\0')
+	if (str == NULL || wlen == 0 || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 
 	arr = (char **)malloc(wlen * sizeof(char *));
