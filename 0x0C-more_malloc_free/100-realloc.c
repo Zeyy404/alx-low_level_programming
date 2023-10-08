@@ -12,16 +12,17 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *_ptr = NULL;
-	unsigned int i;
+	unsigned int i, cbytes;
 
 	if (new_size > old_size || ptr == NULL)
 	{
 		_ptr = malloc(new_size);
 		if (_ptr == NULL)
 			return (NULL);
-		else if (_ptr != NULL && new_size < old_size)
+		else if (_ptr != NULL)
 		{
-			for (i = 0 ; i < new_size ; i++)
+			cbytes = (old_size < new_size) ? old_size : new_size;
+			for (i = 0 ; i < cbytes ; i++)
 			{
 				_ptr[i] = ((char *)ptr)[i];
 			}
