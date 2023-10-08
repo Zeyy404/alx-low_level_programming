@@ -22,9 +22,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	byte_ptr = (char *)ptr;
-	for (i = 0 ; i < nmemb ; i++)
+	for (i = 0 ; i < (nmemb * size) ; i++)
 	{
 		byte_ptr[i] = 0;
 	}
-	return (ptr);
+	return (byte_ptr);
 }
