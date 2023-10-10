@@ -31,17 +31,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(husky);
 		return (NULL);
 	}
+	for (k = 0 ; k <= i ; k++)
+		(*husky).name[i] = name[i];
+	(*husky).age = age;
 	(*husky).owner = malloc(sizeof(char) * j + 1);
-	if (((*husky).owner) == NULL)
+	if ((*husky).owner == NULL)
 	{
 		free((*husky).name);
 		free(husky);
 		return (NULL);
 	}
-
-	for (k = 0 ; k <= i ; k++)
-		(*husky).name[i] = name[i];
-	(*husky).age = age;
 	for (k = 0 ; k <= j ; k++)
 		(*husky).owner[k] = owner[k];
 	return (husky);
