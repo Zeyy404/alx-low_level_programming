@@ -10,6 +10,7 @@
 void handle_char(va_list args)
 {
 	int value = va_arg(args, int);
+
 	printf("%c", (char)value);
 }
 
@@ -21,6 +22,7 @@ void handle_char(va_list args)
 void handle_int(va_list args)
 {
 	int value = va_arg(args, int);
+
 	printf("%d", value);
 }
 
@@ -32,6 +34,7 @@ void handle_int(va_list args)
 void handle_float(va_list args)
 {
 	double value = va_arg(args, double);
+
 	printf("%f", value);
 }
 
@@ -43,6 +46,7 @@ void handle_float(va_list args)
 void handle_string(va_list args)
 {
 	const char *str = va_arg(args, const char *);
+
 	(str == NULL) ? printf("(nil)") : printf("%s", str);
 }
 
@@ -74,7 +78,7 @@ void print_all(const char * const format, ...)
 		if (j < 4)
 		{
 			func[j].action(args);
-			if (j != 3)
+			if (*(format + i + 1))
 				printf("%s", sep);
 		}
 		i++;
