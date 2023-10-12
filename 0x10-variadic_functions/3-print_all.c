@@ -43,12 +43,7 @@ void handle_float(va_list args)
 void handle_string(va_list args)
 {
 	const char *str = va_arg(args, const char *);
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", str);
+	(str == NULL) ? printf("(nil)") : printf("%s", str);
 }
 
 /**
