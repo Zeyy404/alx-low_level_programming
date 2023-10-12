@@ -33,7 +33,7 @@ void handle_int(va_list args)
  */
 void handle_float(va_list args)
 {
-	double value = va_arg(args, double);
+	float value = va_arg(args, double);
 
 	printf("%f", value);
 }
@@ -45,9 +45,9 @@ void handle_float(va_list args)
  */
 void handle_string(va_list args)
 {
-	const char *str = va_arg(args, const char *);
+	char *str = va_arg(args, char *);
 
-	(*str == '\0') ? printf("(nil)") : printf("%s", str);
+	(str == NULL) ? printf("(nil)") : printf("%s", str);
 }
 
 /**
