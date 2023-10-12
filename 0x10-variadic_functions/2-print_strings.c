@@ -20,6 +20,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		printf("\n");
 		return;
 	}
+
+	va_start(args, n);
 	for (i = 0 ; i < n ; i++)
 	{
 		x = va_arg(args, const char *);
