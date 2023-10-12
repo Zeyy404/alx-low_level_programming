@@ -64,11 +64,10 @@ void print_all(const char * const format, ...)
 		{"s", handle_string}
 	};
 	va_list args;
-	int i, j;
+	int i, j = 0;
 	char *sep = ", ";
 
 	va_start(args, format);
-	i = 0;
 	while (*format && (*(format + i)))
 	{
 		j = 0;
