@@ -9,7 +9,7 @@
  */
 void handle_char(va_list args)
 {
-	char character = va_arg(args, char);
+	char character = va_arg(args, int);
 
 	printf("%c", character);
 }
@@ -33,7 +33,7 @@ void handle_int(va_list args)
  */
 void handle_float(va_list args)
 {
-	float value = va_arg(args, float);
+	float value = va_arg(args, double);
 
 	printf("%f", value);
 }
