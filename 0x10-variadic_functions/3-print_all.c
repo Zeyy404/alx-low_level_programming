@@ -47,7 +47,7 @@ void handle_string(va_list args)
 {
 	const char *str = va_arg(args, const char *);
 
-	(str == NULL) ? printf("(nil)") : printf("%s", str);
+	(*str == '\0') ? printf("(nil)") : printf("%s", str);
 }
 
 /**
@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 	char *sep = ", ";
 
 	va_start(args, format);
-	while (*format && (*(format + i)))
+	while (*format && *(format + i))
 	{
 		j = 0;
 		while (j < 4 && *(format + i) != *(func[j].specifier))
