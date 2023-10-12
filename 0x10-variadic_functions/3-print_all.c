@@ -23,6 +23,7 @@ void handle_int(va_list args)
 	int value = va_arg(args, int);
 	printf("%d", value);
 }
+
 /**
  * handle_float - print a float
  * @args: argument to be printed
@@ -33,6 +34,7 @@ void handle_float(va_list args)
 	double value = va_arg(args, double);
 	printf("%f", value);
 }
+
 /**
  * handle_string - prints a string
  * @args: argument to be printed
@@ -41,11 +43,14 @@ void handle_float(va_list args)
 void handle_string(va_list args)
 {
 	const char *str = va_arg(args, const char *);
-	if (str != NULL)
-		printf("%s", str);
-	else
+	if (str == NULL)
+	{
 		printf("(nil)");
+		return;
+	}
+	printf("%s", str);
 }
+
 /**
  * print_all - prints anything
  * @format: the type of arguments passed to the function
