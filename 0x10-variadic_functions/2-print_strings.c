@@ -4,7 +4,7 @@
 #include <stdarg.h>
 
 /**
- * print_string - prints strings, followed by a new line
+ * print_strings - prints strings, followed by a new line
  * @separator: type char pointer, string to be printed between strings
  * @n: number of strings passed to the function
  * Return: void
