@@ -9,11 +9,11 @@
  * @specifier: The data type specifier
  * @action: The function associated
  */
-typedef struct print
+typedef struct handle
 {
 	char *specifier;
-	void (*action)(va_list args);
-} print_t;
+	void (*f)(va_list args);
+} handle_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);

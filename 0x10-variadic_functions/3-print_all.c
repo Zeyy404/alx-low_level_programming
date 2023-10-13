@@ -47,7 +47,7 @@ void handle_string(va_list args)
 {
 	char *str = va_arg(args, char *);
 
-	(str == NULL) ? printf("(nil)") : printf("%s", str);
+	(str == NULL) ? printf("(nil)"), return : printf("%s", str);
 }
 
 /**
@@ -57,7 +57,7 @@ void handle_string(va_list args)
  */
 void print_all(const char * const format, ...)
 {
-	print_t func[] = {
+	handle_t func[] = {
 		{"c", handle_char},
 		{"i", handle_int},
 		{"f", handle_float},
@@ -68,16 +68,16 @@ void print_all(const char * const format, ...)
 	char *sep = ", ";
 
 	va_start(args, format);
-	while (*format && *(format + i))
+	while (format && format[i])
 	{
 		j = 0;
-		while (j < 4 && *(format + i) != *(func[j].specifier))
+		while (j < 4 && format[i] != func[j].specifier[0])
 			j++;
 
 		if (j < 4)
 		{
-			func[j].action(args);
-			if (*(format + i + 1))
+			func[j].f;
+			if (format[i + 1])
 				printf("%s", sep);
 		}
 		i++;
