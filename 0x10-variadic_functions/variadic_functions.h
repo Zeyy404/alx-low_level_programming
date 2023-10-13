@@ -4,7 +4,7 @@
 #include <stdarg.h>
 
 /**
- * struct func - Struct func
+ * struct handle - Struct handle
  *
  * @specifier: The data type specifier
  * @f: The function associated
