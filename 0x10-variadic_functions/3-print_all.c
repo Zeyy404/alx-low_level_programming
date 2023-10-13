@@ -47,7 +47,7 @@ void handle_string(va_list args)
 {
 	char *str = va_arg(args, char *);
 
-	(str == NULL) ? printf("(nil)"), return : printf("%s", str);
+	(str == NULL) ? printf("(nil)") : printf("%s", str);
 }
 
 /**
@@ -76,7 +76,7 @@ void print_all(const char * const format, ...)
 
 		if (j < 4)
 		{
-			func[j].f;
+			func[j].f(args);
 			if (format[i + 1])
 				printf("%s", sep);
 		}
