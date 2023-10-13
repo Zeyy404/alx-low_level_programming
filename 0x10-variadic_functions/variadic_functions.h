@@ -7,7 +7,7 @@
  * struct func - Struct func
  *
  * @specifier: The data type specifier
- * @action: The function associated
+ * @f: The function associated
  */
 typedef struct handle
 {
