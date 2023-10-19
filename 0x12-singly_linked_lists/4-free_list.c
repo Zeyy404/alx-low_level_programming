@@ -2,7 +2,7 @@
 
 /**
  * free_list - frees a list_t list
- * @h: a pointer to a singly linked list
+ * @head: a pointer to a singly linked list
  * Return: void
  */
 void free_list(list_t *head)
@@ -13,6 +13,7 @@ void free_list(list_t *head)
 	{
 		aux = head;
 		head = head->next;
+		free(aux->str);
 		free(aux);
 	}
 
