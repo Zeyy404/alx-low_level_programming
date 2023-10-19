@@ -8,12 +8,12 @@ message db "Hello, Holberton", 10, 0
 	extern printf
 
 main:
-	sub rsp, 8
+	push 	rbp
 
-	push message
-	call printf
-	add rsp, 16
+	mov 	rdi, message
+	call	printf
 
-	mov rax, 60
-	xor rdi, rdi
-	syscall
+	pop 	rbp
+
+	mov 	rax, 0
+	ret
