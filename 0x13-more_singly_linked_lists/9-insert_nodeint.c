@@ -42,10 +42,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		h = h->next;
 		i++;
 	}
-	if (i != idx)
-		return (NULL);
-	else
-		return (h->next);
+	return (h->next);
 }
 
 /**
