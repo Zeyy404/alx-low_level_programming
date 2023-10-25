@@ -27,13 +27,11 @@ size_t print_listint_safe(const listint_t *head)
 			if (h == _h)
 			{
 				printf("-> [%p] %d\n", (void *)h, h->n);
-				return (i);
+				return (i + 1);
 			}
 			_h = _h->next;
 			j++;
 		}
-		if (head == NULL)
-			return (98);
 	}
 	return (i);
 }
