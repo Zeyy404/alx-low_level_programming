@@ -8,7 +8,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *h, *_h;
-	size_t i , j;
+	size_t i, j;
 
 	if (head == NULL)
 		return (98);
@@ -26,12 +26,14 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			if (h == _h)
 			{
-				printf("-> [%p] %d\n",(void *)h, h->n);
+				printf("-> [%p] %d\n", (void *)h, h->n);
 				return (i);
 			}
 			_h = _h->next;
 			j++;
 		}
+		if (head == NULL)
+			return (98);
 	}
 	return (i);
 }
