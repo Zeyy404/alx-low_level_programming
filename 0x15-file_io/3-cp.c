@@ -30,8 +30,7 @@ void fcheck(int fd_f, int fd_t, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	int fd_f, fd_t, close_f, close_t;
-	ssize_t rd, wr;
+	int fd_f, fd_t, close_f, close_t, rd, wr;
 	char buffer[1024];
 
 	if (argc != 3)
