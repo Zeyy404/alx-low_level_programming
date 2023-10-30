@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * file_err - checks if files can be opened
+ * fcheck - checks if files can be opened
  * @fd_f: first file
  * @fd_t: second file
  * @argv: passed arguments vectors
@@ -30,7 +30,8 @@ void file_err(int fd_f, int fd_t, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	int fd_f, fd_t, rd, wr, close_f, close_t;
+	int fd_f, fd_t, close_f, close_t;
+	ssize_t rd, wr;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -40,16 +41,16 @@ int main(int argc, char *argv[])
 	}
 	fd_f = open(argv[1], O_RDONLY);
 	fd_t = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	file_err(fd_f, fd_t, argv);
+	fcheck(fd_f, fd_t, argv);
 	rd = 1024;
 	while (rd == 1024)
 	{
 		rd = read(fd_f, buffer, 1024);
 		if (rd == -1)
-			file_err(-1, 0, argv);
+			fcheck(-1, 0, argv);
 		wr = write(fd_t, buffer, rd);
 		if (wr == -1)
-			file_err(0, -1, argv);
+			fcheck(0, -1, argv);
 	}
 	close_f = close(fd_f);
 	close_t = close(fd_t);
