@@ -8,7 +8,7 @@
  * @argv: passed arguments vectors
  * Return: void
  */
-void file_err(int fd_f, int fd_t, char *argv[])
+void fcheck(int fd_f, int fd_t, char *argv[])
 {
 	if (fd_f == -1)
 	{
