@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		if (rd == -1)
 			fcheck(-1, 0, argv);
 		wr = write(fd_t, buffer, rd);
-		if (wr == -1)
+		if (wr == -1 || wr != rd)
 			fcheck(0, -1, argv);
 	}
 	close_f = close(fd_f);
