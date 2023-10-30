@@ -2,7 +2,7 @@
 
 /**
  * append_text_to_file - appends text at the end of a file
- * @filenaem: a pointer to the name of the file
+ * @filename: a pointer to the name of the file
  * @text_content: the NULL terminated string to add at the end of the file
  * Return: 1 on success, or -1 on failur
  */
