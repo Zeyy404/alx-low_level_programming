@@ -5,12 +5,12 @@
  * @ht: the hash table you want to add or update key/value to it
  * @key: is the key (can not be an empty string)
  * @value: is the value to be associated with the key. (can be an empty sting)
-             must be duplicated.
- * @Return: 1 if succeeded, 0, otherwise
+ *              must be duplicated.
+ * Return: 1 if succeeded, 0, otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t * new_hash_node;
+	hash_node_t *new_hash_node;
 	unsigned long int index, i;
 
 	if (ht == NULL || key == NULL || *key == '\0')
