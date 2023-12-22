@@ -1,5 +1,7 @@
 #include "hash_tables.h"
 
+int shash_table_set(shash_table_t *ht, const char *key, const char *value);
+
 /**
  * shash_table_create - creates a sorted hash table
  * @size: the size of the array
@@ -39,20 +41,22 @@ shash_table_t *shash_table_create(unsigned long int size)
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	shash_node_t *shash_node, *tmp;
-	unsigned long int index, i;
+	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	for (i = 0; ht->array[i]; i++)
+	tmp = ht->shead;
+	while (tmp != NULL)
 	{
-		if (strcmp(ht->array[i]->key, key) == 0)
+		if (strcmp(tmp->key, key) == 0)
 		{
-			free(ht->array[i]->value);
-			ht->array[i]->value = strdup(value);
+			free(tmp->value);
+			tmp->value = strdup(value);
 			return (1);
 		}
+		tmp = tmp->snext;
 	}
 
 	shash_node = malloc(sizeof(shash_node_t));
@@ -132,23 +136,19 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 void shash_table_print(const shash_table_t *ht)
 {
 	shash_node_t *h_node;
-	unsigned long int i;
 	int first = 1;
 
 	if (ht == NULL)
 		return;
+	h_node = ht->shead;
 	printf("{");
-	for (i = 0; i < ht->size; i++)
+	while (h_node != NULL)
 	{
-		h_node = ht->array[i];
-		while (h_node != NULL)
-		{
-			if (!first)
-				printf(", ");
-			printf("'%s': '%s'", h_node->key, h_node->value);
-			first = 0;
-			h_node = h_node->snext;
-		}
+		if (!first)
+			printf(", ");
+		printf("'%s': '%s'", h_node->key, h_node->value);
+		first = 0;
+		h_node = h_node->snext;
 	}
 	printf("}\n");
 }
@@ -161,23 +161,19 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *h_node;
-	unsigned long int i;
 	int first = 1;
 
 	if (ht == NULL)
 		return;
+	h_node = ht->stail;
 	printf("{");
-	for (i = 0; i < ht->size; i++)
+	while (h_node != NULL)
 	{
-		h_node = ht->array[i];
-		while (h_node != NULL)
-		{
-			if (!first)
-				printf(", ");
-			printf("'%s': '%s'", h_node->key, h_node->value);
-			first = 0;
-			h_node = h_node->sprev;
-		}
+		if (!first)
+			printf(", ");
+		printf("'%s': '%s'", h_node->key, h_node->value);
+		first = 0;
+		h_node = h_node->sprev;
 	}
 	printf("}\n");
 }
