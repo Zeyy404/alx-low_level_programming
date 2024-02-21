@@ -8,7 +8,7 @@ def island_perimeter(grid):
        Args:
           grid (list): a list of list of integers
                  0 represents a water zone
-                 1 represents a land zone 
+                 1 represents a land zone
     """
     perimeter = 0
 
